@@ -30,7 +30,7 @@ const postContacts = (req,res) => {
 
     let newContact = {};
 
-    newContact.name = req.body.name
+    newContact.name = req.body.name 
     newContact.occupation = req.body.occupation;
     newContact.avatar = req.body.avatar
     newContact._id = randomInt();
