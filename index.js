@@ -128,7 +128,13 @@ app.post('vehicles', (req, res) => {
     
     let newVehicles = {};
     
-    newVehicles.name = req.body.name;
+    newVehicles.year = req.body.year;
+    newVehicles.make = req.body.make;
+    newVehicles.model = req.body.model;
+    newVehicles.price = req.body.price;
+    newVehicles.fuel = req.body.fuel;
+    newVehicles.city = req.body.city;
+    newVehicles.isNew = req.body.isNew;
     newVehicles.occupation = req.body.occupation;
     newVehicles.avatar = req.body.avatar;
     newVehicles._id = randomInt();
@@ -143,9 +149,8 @@ app.post('comments', (req, res) => {
     
     let newComments = {};
     
-    newComments.name = req.body.name;
-    newComments.occupation = req.body.occupation;
-    newComments.avatar = req.body.avatar;
+    newComments.body = req.body.body;
+    newComments.postId = req.body.postId;
     newComments._id = randomInt();
     
     comments.push(newComments);
@@ -159,8 +164,10 @@ app.post('products', (req, res) => {
     let newProducts = {};
     
     newProducts.name = req.body.name;
-    newProducts.occupation = req.body.occupation;
-    newProducts.avatar = req.body.avatar;
+    newProducts.description = req.body.description;
+    newProducts.rating = req.body.rating;
+    newProducts.price = req.body.price
+    newProducts.category = req.body.price
     newProducts._id = randomInt();
     
     products.push(newProducts);
